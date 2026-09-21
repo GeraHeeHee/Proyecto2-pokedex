@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex - Proyecto1</title>
+    <link rel="stylesheet" href="{% static 'pokedex/css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Pokédex</h1>
+        <p class="subtitle">Datos y estadísticas de 10 Pokémon</p>
+
+        <div class="pokemon-grid">
+            {% for pokemon in pokemones %}
+            <div class="pokemon-card">
+                <table class="pokemon-table">
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="pokemon-header">
+                                #{{ pokemon.id_formateado }} — {{ pokemon.nombre }}
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ID</td>
+                            <td>{{ pokemon.id_formateado }}</td>
+                        </tr>
+                        <tr>
+                            <td>Nombre</td>
+                            <td>{{ pokemon.nombre }}</td>
+                        </tr>
+                        <tr>
+                            <td>Tipo 1</td>
+                            <td>{{ pokemon.tipo1 }}</td>
+                        </tr>
+                        <tr>
+                            <td>Tipo 2</td>
+                            <td>{{ pokemon.tipo2 }}</td>
+                        </tr>
+                        <tr class="stat-row">
+                            <td>Vida (HP)</td>
+                            <td>{{ pokemon.estadisticas.vida }}</td>
+                        </tr>
+                        <tr class="stat-row">
+                            <td>Ataque</td>
+                            <td>{{ pokemon.estadisticas.ataque }}</td>
+                        </tr>
+                        <tr class="stat-row">
+                            <td>Defensa</td>
+                            <td>{{ pokemon.estadisticas.defensa }}</td>
+                        </tr>
+                        <tr class="stat-row">
+                            <td>Ataque especial</td>
+                            <td>{{ pokemon.estadisticas.ataque_especial }}</td>
+                        </tr>
+                        <tr class="stat-row">
+                            <td>Defensa especial</td>
+                            <td>{{ pokemon.estadisticas.defensa_especial }}</td>
+                        </tr>
+                        <tr class="stat-row">
+                            <td>Velocidad</td>
+                            <td>{{ pokemon.estadisticas.velocidad }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

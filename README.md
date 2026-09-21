@@ -37,3 +37,4 @@ Los datos están en `pokedex/data.py`, en la lista `POKEMON_DATA`. Puedes
 agregar, quitar o modificar Pokémon ahí; cada uno es un diccionario con
 `nombre`, `id`, `tipo1`, `tipo2` (usa `None` si no tiene) y `estadisticas`.
 # Proyecto2-pokedex
+# Proyecto2-pokedex
