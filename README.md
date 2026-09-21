@@ -1,4 +1,4 @@
-# Proyecto1 - Pokédex (Django)
+# Proyecto2 - Pokédex (Django)
 
 Proyecto Django que muestra 10 tablas con datos y estadísticas de Pokémon
 (Nombre, ID, Tipo 1, Tipo 2, Vida, Ataque, Defensa, Ataque especial,
@@ -36,5 +36,4 @@ Defensa especial y Velocidad).
 Los datos están en `pokedex/data.py`, en la lista `POKEMON_DATA`. Puedes
 agregar, quitar o modificar Pokémon ahí; cada uno es un diccionario con
 `nombre`, `id`, `tipo1`, `tipo2` (usa `None` si no tiene) y `estadisticas`.
-# Proyecto2-pokedex
-# Proyecto2-pokedex
+
